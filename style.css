@@ -1,0 +1,24 @@
+body{background-color: #008080;}
+@font-face {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url(Jersey10-Regular.ttf) format("truetype");
+  }  
+
+h1{color: white}
+h1{font-family: "Jersey 10";}
+h1{font-size: 24px;}
+h1{letter-spacing: 1px;}
+h1{line-height: 0%;}
+
+body{color: black}
+body{font-family: "Jersey 10";}
+body{font-size: 24px;}
+body{letter-spacing: 1px;}
+
+button{background-color: #c0c0c0; color: black;}
+button{font-family: "Jersey 10"; font-size: 24px; letter-spacing: 1px;}
+button{border-top: white; border-bottom: black; border-left: white; border-right: black;}
+button{border-width: 2px; border-style: solid;}
+button{padding-left: 24px; padding-right: 24px; margin-left: 16px;}
