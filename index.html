@@ -11,6 +11,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
     <style>
+        .modal {
+            display: grid;
+            grid-template-areas:
+            "title"
+            "paragraph"
+            "buttons";
+        }
+        .modal-content > div.title {
+            background-color: #000080;
+            padding: 4px;
+            padding-left: 8px;
+            grid-area: title;
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close {
+            background-color: #c0c0c0;
+            border-top: 2px solid white; border-bottom: 2px solid black; border-left: 2px solid white; border-right: 2px solid black;
+            outline: 2px solid #afafaf; outline-offset: -4px;
+            width: 30px; height: 30px;
+            display: flex; justify-content: center; align-items: center;
+            text-align: center; align-items: center;
+            color: black; font-size: 24px;
+        }
+        .modal-content > div.paragraph {
+            margin: 8px;
+            margin-bottom: 16px;
+            grid-area: paragraph;
+            display: flex;
+            text-align: left; align-items: flex-start; justify-content: space-evenly;
+        }
+        .modal-content > div.buttons {
+            margin: 8px;
+            margin-top: 0px;
+            grid-area: buttons;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            border-top: 2px solid #808080;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="title"><h1>Burt Lockbuster</h1><span class="close">&times;</span></div>
+    <div class="paragraph"><p>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
+        MUHAHAHA!!!</p></div>
+    <div class="buttons"><button class="ok-btn">OK</button><button>Cancel</button></div>
+  </div>
+
+<!-- 
+  <div id="MediaPlayer" class="modal">
+    <div class="modal-content">
+        <div class="title"><h1>Media Player</h1><span class="close">&times;</span></div>
+        <div class="paragraph"><video controls="false">
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video></div>
+        <div class="buttons"><button class="ok-btn">OK</button><button>Cancel</button></div>
+
+</div>
+-->
+
+<!-- 
         .container {
             display: grid;
             grid-template-areas:
@@ -39,17 +113,12 @@
             align-items: right;
             justify-items: right;
         }
-    </style>
-</head>
-<body>
-    <h1>Burt Lockbuster</h1>
-    <body>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
-        MUHAHAHA!!!</body>
 
-    <div class="container">
+<div class="container">
         <div class="title"><h1>Burt Lockbuster</h1></div>
         <div class="paragraph"><p>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
             MUHAHAHA!!!</p></div>
         <div class="buttons"><button>OK</button><button>Cancel</button></div>
-    </div>
+    </div> 
+    -->    
             

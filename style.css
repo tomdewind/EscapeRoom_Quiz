@@ -6,19 +6,98 @@ body{background-color: #008080;}
     src: url(Jersey10-Regular.ttf) format("truetype");
   }  
 
-h1{color: white}
-h1{font-family: "Jersey 10";}
-h1{font-size: 24px;}
-h1{letter-spacing: 1px;}
-h1{line-height: 0%;}
+*{
+  box-sizing: border-box;
+}
 
-body{color: black}
-body{font-family: "Jersey 10";}
-body{font-size: 24px;}
-body{letter-spacing: 1px;}
+h1{
+  color: white;
+  font-family: "Jersey 10";
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 0%;
+}
 
-button{background-color: #c0c0c0; color: black;}
-button{font-family: "Jersey 10"; font-size: 24px; letter-spacing: 1px;}
-button{border-top: white; border-bottom: black; border-left: white; border-right: black;}
-button{border-width: 2px; border-style: solid;}
-button{min-width: 104px; padding-left: 24px; padding-right: 24px; margin-left: 16px;}
+body{
+  font-family: "Jersey 10";
+}
+
+p{
+  margin:0;
+  color: black;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+button {
+  background-color: #c0c0c0;
+  color: black;
+  font-family: "Jersey 10";
+  font-size: 24px;
+  letter-spacing: 1px;
+  border-top: white;
+  border-bottom: black;
+  border-left: white;
+  border-right: black;
+  border-width: 2px;
+  border-style: solid;
+  outline: 2px solid #afafaf;
+  outline-offset: -4px;
+  min-width: 104px;
+  /* padding-left: 24px;
+  padding-right: 24px;
+  margin-left: 16px;
+  margin-top: 12px; */
+  cursor: pointer;
+}
+
+button:active {
+  border: 2px solid #808080;
+}
+
+/* The Modal (background) */
+.modal {
+  display: grid;
+  grid-template-areas:
+  "title"
+  "paragraph"
+  "buttons";
+  grid-template-rows: 1fr 3fr 1fr;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #c0c0c0;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 8px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  outline: 2px solid #808080;
+  outline-offset: -4px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close:hover {
+  cursor: pointer;
+}
+.close:active {
+  border: 2px solid #808080;
+}
+
+.buttons{
+  gap:1rem;
+  padding:1rem 0rem 0rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
