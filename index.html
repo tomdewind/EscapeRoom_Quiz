@@ -13,23 +13,23 @@
 </head>
 <body>
     <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button id="Start">Start</button>
+<button id="LaunchMediaPlayer">Media Player</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
+<!-- Start Modal -->
+<div id="StartDialog" class="modal">
+  <div class="modal-content" data-type="dialog">
     <div class="header"><h1>Burt Lockbuster</h1><span class="close">&times;</span></div>
     <div class="content"><p>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
         MUHAHAHA!!!</p></div>
-    <div class="footer"><button class="ok-btn">OK</button><button>Cancel</button></div>
+    <div class="footer"><button class="start-modal-proceed">OK</button><button>Cancel</button></div>
   </div>
 
+<!-- Media Player -->
  <div id="MediaPlayer" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" data-type="player">
         <div class="header"><h1>Media Player</h1><span class="close">&times;</span></div>
-        <div class="content"><video class="video" muted> 
+        <div class="content"><video class="video"> 
             <source src="https://tom.dewind.nl/wp-content/uploads/2025/03/002_Commercial_Gasfornuis.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video></div>

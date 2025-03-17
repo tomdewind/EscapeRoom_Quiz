@@ -61,7 +61,6 @@ button {
   margin-top: 12px; */
   cursor: pointer;
 }
-
 button:active {
   border: 2px solid #808080;
 }
@@ -81,7 +80,6 @@ button:active {
   height: 100%; /* Full height */
   margin-left: auto; margin-right: auto;
 }
-
 .modal-content {
   background-color: #c0c0c0;
   margin:1% auto; /* 15% from the top and centered */
@@ -94,7 +92,6 @@ button:active {
   outline-offset: -4px;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 .modal-content > div.header {
   background-color: #000080;
   padding: 4px;
@@ -106,6 +103,7 @@ button:active {
   justify-content: space-between;
   align-items: center;
 }
+
 .close {
   background-color: #c0c0c0;
   border-top: 2px solid white; border-bottom: 2px solid black; border-left: 2px solid white; border-right: 2px solid black;
@@ -121,6 +119,7 @@ button:active {
 .close:active {
   border: 2px solid #808080;
 }
+
 .play {
   background-color: #c0c0c0;
   border-top: 2px solid white; border-bottom: 2px solid black; border-left: 2px solid white; border-right: 2px solid black;
@@ -136,6 +135,7 @@ button:active {
 .play:active {
   border: 2px solid #808080;
 }
+
 .modal-content > div.content {
   margin: 8px;
   margin-bottom: 16px; margin-top: 16px;
@@ -148,14 +148,21 @@ button:active {
   margin-top: 0px;
   grid-area: footer;
   display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid #808080;
+}
+.modal-content[data-type="dialog"] > div.footer {
   align-items: flex-end;
   justify-content: flex-end;
-  border-top: 2px solid #808080;
+}
+.modal-content[data-type="player"] > div.footer {
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .footer{
   gap:1rem;
-  padding:1rem 0rem 0rem 1rem;
+  padding:1rem 0rem 0rem 0rem;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
