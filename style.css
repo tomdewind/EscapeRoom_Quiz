@@ -40,6 +40,17 @@ video{
   width: 100%; height: 100%;
 }
 
+input{
+  width: 100%; height: fit-content;
+  background-color: white;
+  border-top: black; border-left: black; 
+  border-bottom: white; border-right: white; 
+  border-width: 2px; border-style: solid;
+  font-family: "Jersey 10"; font-size: 24px;
+  outline: 2px solid #808080; outline-offset: -4px;
+  padding-left: 4px; padding-right: 4px;
+}
+
 button {
   background-color: #c0c0c0;
   color: black;
@@ -80,6 +91,7 @@ button:active {
   height: 100%; /* Full height */
   margin-left: auto; margin-right: auto;
 }
+
 .modal-content {
   background-color: #c0c0c0;
   margin:1% auto; /* 15% from the top and centered */
@@ -120,7 +132,7 @@ button:active {
   border: 2px solid #808080;
 }
 
-.play {
+.playbtn {
   background-color: #c0c0c0;
   border-top: 2px solid white; border-bottom: 2px solid black; border-left: 2px solid white; border-right: 2px solid black;
   outline: 2px solid #afafaf; outline-offset: -4px;
@@ -129,10 +141,26 @@ button:active {
   text-align: center; align-items: center;
   color: black; font-size: 24px;
 }
-.play:hover {
+.playbtn:hover {
   cursor: pointer;
 }
-.play:active {
+.playbtn:active {
+  border: 2px solid #808080;
+}
+
+.mute {
+  background-color: #c0c0c0;
+  border-top: 2px solid white; border-bottom: 2px solid black; border-left: 2px solid white; border-right: 2px solid black;
+  outline: 2px solid #afafaf; outline-offset: -4px;
+  width: 32px; height: 32px;
+  display: flex; justify-content: center; align-items: center;
+  text-align: center; align-items: center;
+  color: black; font-size: 24px;
+}
+.mute:hover {
+  cursor: pointer;
+}
+.mute:active {
   border: 2px solid #808080;
 }
 
@@ -140,8 +168,9 @@ button:active {
   margin: 8px;
   margin-bottom: 16px; margin-top: 16px;
   grid-area: content;
-  display: flex;
-  text-align: left; align-items: flex-start; justify-content: space-evenly;
+  gap: 8px;
+  display: flex; flex-direction: column;
+  text-align: left; align-items: flex-start; justify-content: flex-start;
 }
 .modal-content > div.footer {
   margin: 8px;
@@ -151,13 +180,21 @@ button:active {
   flex-wrap: wrap;
   border-top: 2px solid #808080;
 }
+
+.modal-content[data-type="dialog"] {
+  margin: 15% auto;
+}
+.modal-content[data-type="input"] {
+  margin: 20% auto;
+  width: 50%;
+}
 .modal-content[data-type="dialog"] > div.footer {
   align-items: flex-end;
   justify-content: flex-end;
 }
 .modal-content[data-type="player"] > div.footer {
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .footer{
@@ -167,4 +204,8 @@ button:active {
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: flex-end;
+}
+
+#scarface_solution{
+  display: none;
 }

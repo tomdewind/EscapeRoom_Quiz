@@ -19,22 +19,62 @@
 <!-- Start Modal -->
 <div id="StartDialog" class="modal">
   <div class="modal-content" data-type="dialog">
-    <div class="header"><h1>Burt Lockbuster</h1><span class="close">&times;</span></div>
-    <div class="content"><p>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
-        MUHAHAHA!!!</p></div>
-    <div class="footer"><button class="start-modal-proceed">OK</button><button>Cancel</button></div>
+    <div class="header">
+        <h1>Burt Lockbuster</h1><span class="close">&times;</span>
+    </div>
+    <div class="content">
+        <p>You dare to set foot in my store with your crippling debts? After more than ten years of overdue rentals? Alright then, naming the following famous movie quotes must be a piece of cake for you!
+        MUHAHAHA!!!</p>
+    </div>
+    <div class="footer">
+        <button class="start-modal-proceed">OK</button>
+        <button class="close">Cancel</button></div>
   </div>
+</div>
 
 <!-- Media Player -->
  <div id="MediaPlayer" class="modal">
     <div class="modal-content" data-type="player">
-        <div class="header"><h1>Media Player</h1><span class="close">&times;</span></div>
-        <div class="content"><video class="video"> 
-            <source src="https://tom.dewind.nl/wp-content/uploads/2025/03/002_Commercial_Gasfornuis.mp4" type="video/mp4">
+        <div class="header">
+            <h1>Media Player</h1><span class="close">&times;</span>
+        </div>
+        <div class="content" id="video-content">
+            
+        <video class="video" id="scarface_question"> 
+            <source src="video/001_scarface_question.mp4" type="video/mp4">
             Your browser does not support the video tag.
-          </video></div>
-        <div class="footer"><span class="play"><img src="img/play_pix.png" alt="Play"></span></div>
+          </video>
+        
+        <video class="video" id="scarface_solution"> 
+            <source src="video/001_scarface_solution.mp4"  type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        <!-- <video class="video" id="theshining_question"> 
+            <source src="video/002_the-shining_question.mp4"  type="video/mp4">
+            Your browser does not support the video tag.
+          </video> -->
+        
+        </div>
+        <div class="footer">
+            <span class="playbtn"><img src="img/play_pix.png" alt="Play"></span>
+            <span class="mute"><img class="muteicon" src="img/sound.png" alt="mute"></span>
+        </div>
+    </div>
 </div>
+
+<!-- Input Dialog -->
+<div id="InputDialog" class="modal">
+    <div class="modal-content" data-type="input">
+      <div class="header"><h1>What is the famous movie quote?</h1>
+        <span class="close">&times;</span>
+    </div>
+      <div class="content">
+        <input type="text" id="answer" placeholder="Type your answer here">
+    </div>
+        <div class="footer"></div>
+    </div>
+  </div>
 
 <!-- 
         .container {
